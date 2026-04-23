@@ -5,7 +5,6 @@ const api = axios.create({
     timeout: 3000,
 });
 
-// Просто пишемо тести один за одним
 test('GET', async () => {
     const response = await api.get('/posts');
     expect(response.status).toBe(200);
