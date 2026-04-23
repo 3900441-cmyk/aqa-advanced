@@ -10,13 +10,13 @@ function fetchUser() {
         .catch(error => console.error("Помилка в колекції Users:", error));
 }
 
-const allPromise = Promise.all([fetchTodo(), fetchUser()])
-    .then(results => {
-        const [todo, user] = results;
-        console.log("Promise.all:", { todo, user });
-    });
+// const allPromise = Promise.all([fetchTodo(), fetchUser()])
+//     .then(results => {
+//         const [todo, user] = results;
+//         console.log("Promise.all:", { todo, user });
+//     });
 
-const racePromise = Promise.race([fetchTodo(), fetchUser()])
-    .then(firstResult => {
-        console.log("Promise.race:", firstResult);
-    });
+// const racePromise = Promise.race([fetchTodo(), fetchUser()])
+//     .then(firstResult => {
+//         console.log("Promise.race:", firstResult);
+//     });
